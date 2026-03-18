@@ -12,8 +12,8 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Nate's Door Service — Garage Door Tips & Guides | Kansas City</title>
-  <meta name="description" content="Garage door tips, how-to guides, and expert advice from Nate's Door Service — Kansas City's trusted garage door pros." />
+  <title>How Long Do Garage Door Springs Last? | Nate's Door Service</title>
+  <meta name="description" content="Find out how long garage door springs typically last, what affects their lifespan, the warning signs they're about to fail, and when to call a pro in Kansas City." />
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -46,27 +46,6 @@
     html { scroll-behavior: smooth; }
     body { padding-bottom: 80px; }
 
-    .card-hover {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.10);
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fade-in:nth-child(2) { transition-delay: 0.1s; }
-    .fade-in:nth-child(3) { transition-delay: 0.2s; }
-    .fade-in:nth-child(4) { transition-delay: 0.3s; }
-
     @keyframes ring {
       0%   { transform: rotate(0deg); }
       5%   { transform: rotate(5deg); }
@@ -84,6 +63,82 @@
       animation: ring 2.5s ease-in-out infinite;
       transform-origin: top center;
     }
+
+    /* Prose styles for article body */
+    .prose h2 {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-top: 2.25rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .prose h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose p {
+      color: #374151;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .prose ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .prose ul li {
+      color: #374151;
+      line-height: 1.75;
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+    .prose ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #3b82f6;
+    }
+    .prose ol {
+      counter-reset: list-counter;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .prose ol li {
+      color: #374151;
+      line-height: 1.75;
+      padding-left: 2rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+      counter-increment: list-counter;
+    }
+    .prose ol li::before {
+      content: counter(list-counter);
+      position: absolute;
+      left: 0;
+      top: 0.05rem;
+      background: #1d4ed8;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .prose strong { color: #111827; }
+    .prose a { color: #1d4ed8; text-decoration: underline; }
+    .prose a:hover { color: #1e3a8a; }
   </style>
 </head>
 <body class="font-sans text-gray-900 bg-white">
@@ -119,7 +174,6 @@
           <a href="/services/commercial"               class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-building w-4 text-brand-mid text-xs"></i> Commercial</a>
         </div>
       </div>
-
 
       <a href="/garage-door-service-areas-kansas-city" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Areas</a>
 
@@ -216,142 +270,257 @@
   </div>
 </nav>
 
-<!-- ═══════════════════════════ PAGE HERO ═══════════════════════════ -->
-<section class="bg-brand-dark text-white py-16 px-4">
-  <div class="max-w-4xl mx-auto text-center">
-    <p class="text-brand-mid text-sm font-semibold uppercase tracking-widest mb-3">From the Experts</p>
-    <h1 class="text-4xl sm:text-5xl font-black leading-tight mb-4">Garage Door Tips &amp; Guides</h1>
-    <p class="text-blue-200 text-lg max-w-xl mx-auto">Practical advice from Kansas City's trusted garage door pros — repairs, maintenance, buying guides, and more.</p>
-  </div>
-</section>
-
-<!-- ═══════════════════════════ BLOG POSTS ═══════════════════════════ -->
-<section class="py-16 px-4 bg-gray-50">
+<!-- ═══════════════════════════ ARTICLE HEADER ═══════════════════════════ -->
+<section class="bg-brand-dark text-white py-14 px-4">
   <div class="max-w-6xl mx-auto">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-blue-300 mb-5 flex items-center gap-2">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <i class="fas fa-chevron-right text-xs text-blue-500"></i>
+      <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+      <i class="fas fa-chevron-right text-xs text-blue-500"></i>
+      <span class="text-blue-200">How Long Do Springs Last?</span>
+    </nav>
 
-    <!-- Category pills (future-ready) -->
-    <div class="flex flex-wrap gap-2 mb-10">
-      <span class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">All</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Repairs</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Maintenance</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Buying Guides</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Safety</span>
+    <div class="flex items-center gap-2 mb-4">
+      <span class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">Maintenance</span>
+      <span class="text-blue-300 text-sm">
+        <time datetime="2026-03-18">March 2026</time>
+      </span>
+      <span class="text-blue-500 text-sm">&bull;</span>
+      <span class="text-blue-300 text-sm">7 min read</span>
     </div>
 
-    <!-- Post grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <h1 class="text-3xl sm:text-4xl font-black leading-tight mb-4">
+      How Long Do Garage Door Springs Last?
+    </h1>
+    <p class="text-blue-200 text-lg leading-relaxed max-w-2xl">
+      Most springs are rated for 10,000 cycles — but that number tells only part of the story. Here's what actually determines how long your springs will last, and the warning signs to watch for before they snap.
+    </p>
 
-      <!-- Post 1 — LIVE -->
-      <a href="/blog/garage-door-wont-open" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-exclamation-triangle text-yellow-400/60 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-garage-open text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Troubleshooting Guide</p>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Repairs</span>
-            <span class="text-gray-400 text-xs">Feb 27, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">Garage Door Won't Open? Here's What to Check First</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">Walk through the most common reasons a garage door refuses to open — from dead remotes to broken springs — and learn what you can safely fix yourself.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
+    <p class="mt-4 text-sm text-blue-300 flex items-center gap-2">
+      <i class="fas fa-map-marker-alt text-brand-mid"></i>
+      Serving homeowners across the Greater Kansas City area, Nate's Door Service provides same-day garage door repair and installation.
+    </p>
 
-      <!-- Post 2 — LIVE -->
-      <a href="/blog/how-long-do-garage-door-springs-last" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-circle-notch text-brand-mid/40 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-tools text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Maintenance Guide</p>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Maintenance</span>
-            <span class="text-gray-400 text-xs">Mar 18, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">How Long Do Garage Door Springs Last?</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">Most springs are rated for 10,000 cycles — but that number tells only part of the story. Learn what actually determines lifespan and the warning signs to watch for.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
-
-      <!-- Post 3 — Coming soon -->
-      <div class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col opacity-60">
-        <div class="bg-gray-100 h-44 flex items-center justify-center">
-          <i class="fas fa-door-open text-gray-300 text-5xl"></i>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-gray-100 text-gray-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Buying Guides</span>
-            <span class="text-gray-300 text-xs">Coming soon</span>
-          </div>
-          <h2 class="font-bold text-gray-400 text-base leading-snug mb-2">Steel vs. Wood Garage Doors: Which Is Right for You?</h2>
-          <p class="text-gray-300 text-sm leading-relaxed flex-1">A side-by-side comparison of cost, durability, curb appeal, and maintenance for the two most popular garage door materials.</p>
-        </div>
+    <div class="mt-6 flex items-center gap-3">
+      <div class="bg-brand text-white rounded-full w-9 h-9 flex items-center justify-center"><i class="fas fa-house text-sm"></i></div>
+      <div>
+        <div class="font-semibold text-sm text-white">Nate's Door Service</div>
+        <div class="text-xs text-blue-300">Kansas City Garage Door Experts</div>
       </div>
-
-      <!-- Post 4 — Coming soon -->
-      <div class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col opacity-60">
-        <div class="bg-gray-100 h-44 flex items-center justify-center">
-          <i class="fas fa-shield-alt text-gray-300 text-5xl"></i>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-gray-100 text-gray-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Safety</span>
-            <span class="text-gray-300 text-xs">Coming soon</span>
-          </div>
-          <h2 class="font-bold text-gray-400 text-base leading-snug mb-2">5 Garage Door Safety Tips Every Homeowner Should Know</h2>
-          <p class="text-gray-300 text-sm leading-relaxed flex-1">Protect your family with these simple but critical safety practices for your garage door system.</p>
-        </div>
-      </div>
-
-      <!-- Post 5 — Coming soon -->
-      <div class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col opacity-60">
-        <div class="bg-gray-100 h-44 flex items-center justify-center">
-          <i class="fas fa-snowflake text-gray-300 text-5xl"></i>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-gray-100 text-gray-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Maintenance</span>
-            <span class="text-gray-300 text-xs">Coming soon</span>
-          </div>
-          <h2 class="font-bold text-gray-400 text-base leading-snug mb-2">Winterizing Your Garage Door in Kansas City</h2>
-          <p class="text-gray-300 text-sm leading-relaxed flex-1">Cold weather is hard on garage door components. Here's how to prep your door before the KC winter hits.</p>
-        </div>
-      </div>
-
-      <!-- Post 6 — Coming soon -->
-      <div class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col opacity-60">
-        <div class="bg-gray-100 h-44 flex items-center justify-center">
-          <i class="fas fa-bolt text-gray-300 text-5xl"></i>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-gray-100 text-gray-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Repairs</span>
-            <span class="text-gray-300 text-xs">Coming soon</span>
-          </div>
-          <h2 class="font-bold text-gray-400 text-base leading-snug mb-2">Why Is My Garage Door Opener So Loud?</h2>
-          <p class="text-gray-300 text-sm leading-relaxed flex-1">Chain, belt, or screw drive — what's normal noise vs. a sign of something about to break.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════ ARTICLE BODY ═══════════════════════════ -->
+<div class="max-w-6xl mx-auto px-4 py-12">
+  <div class="grid lg:grid-cols-[1fr_260px] gap-10 items-start">
+
+    <!-- Main content -->
+    <article class="prose">
+
+      <p>
+        Garage door springs are the hardest-working part of your entire door system. They absorb and release energy every single time the door moves — and most homeowners never think about them until one snaps and the door won't budge.
+      </p>
+      <p>
+        Knowing how long your springs are expected to last — and what can shorten that lifespan — helps you plan ahead instead of getting caught off guard on a busy morning. Here's what you need to know.
+      </p>
+
+      <!-- Quick Answer — AEO block -->
+      <div class="not-prose bg-brand-light border-l-4 border-brand rounded-r-xl px-5 py-4 my-6">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand mb-2">Quick Answer</p>
+        <p class="text-gray-800 text-sm leading-relaxed">Standard garage door springs are rated for about 10,000 cycles — roughly 7 to 10 years with average use. High-cycle springs (20,000–30,000 cycles) last significantly longer and are a worthwhile upgrade. Springs wear out faster on heavier doors, in extreme temperatures, and when not lubricated regularly. If your door is 8+ years old and the springs have never been replaced, it's worth having them inspected.</p>
+      </div>
+
+      <h2>What Is a "Cycle"?</h2>
+      <p>
+        One cycle equals one full open-and-close sequence. Every time you leave the house and come back, that's two cycles. Most households average 3 to 5 cycles per day — higher if you have teenagers driving or a home business operating out of the garage.
+      </p>
+      <p>
+        At 4 cycles per day, a 10,000-cycle spring lasts about <strong>6.8 years</strong>. At 2 cycles per day, the same spring stretches to nearly <strong>14 years</strong>. That's why lifespan varies so much from home to home.
+      </p>
+
+      <!-- Cycle lifespan table -->
+      <div class="not-prose overflow-x-auto my-6 rounded-xl border border-gray-200">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-brand-light">
+              <th class="text-left px-4 py-3 font-bold text-brand-dark">Daily Cycles</th>
+              <th class="text-center px-4 py-3 font-bold text-brand-dark">Standard (10k)</th>
+              <th class="text-center px-4 py-3 font-bold text-brand-dark">High-Cycle (20k)</th>
+              <th class="text-center px-4 py-3 font-bold text-brand-dark">Heavy-Duty (30k)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="bg-white"><td class="px-4 py-3 text-gray-700">2 cycles/day</td><td class="px-4 py-3 text-center text-gray-700">~14 years</td><td class="px-4 py-3 text-center text-gray-700">~27 years</td><td class="px-4 py-3 text-center text-gray-700">~41 years</td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-3 text-gray-700">4 cycles/day</td><td class="px-4 py-3 text-center text-gray-700">~7 years</td><td class="px-4 py-3 text-center text-gray-700">~14 years</td><td class="px-4 py-3 text-center text-gray-700">~21 years</td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 text-gray-700">6 cycles/day</td><td class="px-4 py-3 text-center text-gray-700">~5 years</td><td class="px-4 py-3 text-center text-gray-700">~9 years</td><td class="px-4 py-3 text-center text-gray-700">~14 years</td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-3 text-gray-700">10 cycles/day</td><td class="px-4 py-3 text-center text-gray-700">~3 years</td><td class="px-4 py-3 text-center text-gray-700">~5 years</td><td class="px-4 py-3 text-center text-gray-700">~8 years</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Torsion Springs vs. Extension Springs</h2>
+      <p>
+        The type of spring on your door affects both performance and how long it lasts. Most newer homes have <strong>torsion springs</strong> — the large coiled spring(s) mounted horizontally above the door on a metal shaft. Older homes and lighter doors sometimes use <strong>extension springs</strong>, which run along the horizontal tracks on each side and stretch as the door moves.
+      </p>
+      <ul>
+        <li><strong>Torsion springs</strong> last longer, operate more smoothly, and are considered safer because they stay on the shaft when they break</li>
+        <li><strong>Extension springs</strong> wear out faster and can snap violently — safety cables are required to contain them</li>
+        <li>If you have extension springs and they're nearing end of life, ask about upgrading to torsion during replacement</li>
+      </ul>
+
+      <h2>What Shortens Spring Lifespan</h2>
+      <p>
+        Cycle count isn't the only factor. Springs wear out faster under certain conditions:
+      </p>
+
+      <h3>Heavy doors</h3>
+      <p>
+        Springs are sized to the weight of the door they're balancing. A heavy wood door or an insulated steel door puts more strain on its springs than a lightweight single-panel door. Heavier doors typically require stronger springs — and may wear them out faster if the wrong spring size was installed.
+      </p>
+
+      <h3>Lack of lubrication</h3>
+      <p>
+        Springs need to be lubricated with a lithium-based or silicone spray every 6 to 12 months. A dry spring creates friction at the coils, which generates heat and accelerates wear. This is one of the simplest maintenance tasks you can do to extend spring life, and most homeowners skip it entirely.
+      </p>
+
+      <h3>Kansas City winters</h3>
+      <p>
+        Cold weather makes metal contract and become more brittle. Torsion springs in unheated garages are more prone to snapping in the dead of winter — which is exactly when you least want to be locked out. Keeping springs lubricated going into fall helps them flex more easily in the cold.
+      </p>
+
+      <h3>Rust and corrosion</h3>
+      <p>
+        Rust weakens the metal and creates friction between coils. Springs in humid environments or near salt-treated roads in winter are more vulnerable. A light coat of lubricant spray helps prevent rust from forming.
+      </p>
+
+      <h3>Incorrect spring size</h3>
+      <p>
+        Springs have to be matched to the door's exact weight and height. If a previous technician installed the wrong spring — too light for the door — it will fail well ahead of schedule. This is one reason it matters who does the replacement.
+      </p>
+
+      <h2>Warning Signs Your Springs Are Getting Close</h2>
+      <p>
+        Springs rarely give much warning before they break — but there are a few signs that yours are nearing the end of their life:
+      </p>
+      <ul>
+        <li>The door feels noticeably heavier when lifted manually than it used to</li>
+        <li>The door moves unevenly or one side drops faster than the other</li>
+        <li>You hear squeaking or grinding when the door opens or closes (lubrication may help; if it doesn't, the springs are worn)</li>
+        <li>The opener strains or runs longer than usual to complete a cycle</li>
+        <li>Visible rust or gaps forming in the spring coils</li>
+        <li>The door "bounces" slightly when it reaches the fully open position</li>
+      </ul>
+
+      <!-- Warning box -->
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 my-6">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-exclamation-triangle text-amber-500 mt-0.5 text-lg flex-shrink-0"></i>
+          <div>
+            <p class="font-bold text-amber-800 mb-1">Never ignore a door that feels "off."</p>
+            <p class="text-amber-700 text-sm leading-relaxed">A door that's struggling, moving unevenly, or making new noises is telling you something. Operating it on worn springs puts extra stress on the opener motor and cables — and risks a sudden failure at the worst possible time. A quick inspection is much cheaper than replacing a motor you burned out on a dying spring.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Should You Replace Both Springs at the Same Time?</h2>
+      <p>
+        Yes — and almost every experienced technician will tell you the same thing. If your door has two springs and one breaks, the other has the same number of cycles on it and is likely weeks or months away from failing too.
+      </p>
+      <p>
+        Replacing both during the same service call costs a little more upfront but saves you a second trip charge and the hassle of being stuck with a broken door again soon. It's one of those cases where the math is easy.
+      </p>
+
+      <h2>Are High-Cycle Springs Worth It?</h2>
+      <p>
+        For most households, yes. The cost difference between standard springs and high-cycle springs is modest — typically $30–$60 more for the parts — but you get double or triple the lifespan. If you use your garage frequently or have a heavier door, upgrading to 20,000- or 30,000-cycle springs at the time of replacement is almost always worth it.
+      </p>
+      <p>
+        When Nate replaces springs, he'll always walk you through the options and give you a clear price so you can make the call. No pressure, no upselling — just honest advice.
+      </p>
+
+      <h2>How to Get More Life Out of Your Springs</h2>
+      <ol>
+        <li><strong>Lubricate every 6 months</strong> — use a lithium-based grease or silicone spray on the coils, not WD-40 (which dries out quickly)</li>
+        <li><strong>Balance the door annually</strong> — disconnect the opener, lift the door manually to waist height, and let go. It should stay in place. If it falls or rises, the springs need adjustment</li>
+        <li><strong>Don't ignore small problems</strong> — a door that tracks slightly off or a cable that's fraying puts uneven load on the springs</li>
+        <li><strong>Keep the tracks clean</strong> — dirt and debris in the tracks make the door work harder, which adds wear to the springs</li>
+      </ol>
+
+      <h2>When to Call a Pro</h2>
+      <p>
+        If your springs have broken, don't try to operate the door or replace the springs yourself. Torsion springs are wound under several hundred foot-pounds of tension — releasing that energy improperly causes serious injuries every year. This is one repair that genuinely requires a trained technician with the right tools.
+      </p>
+      <p>
+        If you're not sure where your springs stand, we're happy to take a look. <a href="tel:8162899600">Call us at 816.289.9600</a> and we can schedule an inspection. We serve the entire Kansas City metro — Missouri and Kansas — and same-day appointments are available most days.
+      </p>
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="space-y-6 lg:sticky lg:top-24">
+
+      <!-- CTA card -->
+      <div class="bg-brand-dark text-white rounded-2xl p-6 text-center shadow-lg">
+        <div class="bg-brand/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+          <i class="fas fa-phone text-white text-lg animate-ring"></i>
+        </div>
+        <p class="font-black text-lg mb-1">Need a hand?</p>
+        <p class="text-blue-200 text-sm mb-4 leading-relaxed">Same-day service available across Kansas City.</p>
+        <a href="tel:8162899600"
+           class="block bg-white text-brand font-bold py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm">
+          816.289.9600
+        </a>
+        <a href="/#contact"
+           class="block mt-2 border border-white/30 text-white font-semibold py-3 rounded-xl hover:bg-white/10 transition-colors text-sm">
+          Request a Quote
+        </a>
+      </div>
+
+      <!-- About card -->
+      <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">About the Author</p>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0"><i class="fas fa-house text-sm"></i></div>
+          <div>
+            <p class="font-bold text-sm text-gray-900">Nate's Door Service</p>
+            <p class="text-xs text-gray-500">15+ years in Kansas City</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Kansas City's trusted garage door experts since 2010, serving the entire KC metro with residential and commercial installation, repair, and spring replacement.</p>
+      </div>
+
+      <!-- More articles -->
+      <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-3">More Articles</p>
+        <div class="space-y-3">
+          <a href="/blog/garage-door-wont-open" class="text-sm text-brand flex items-start gap-2 hover:text-brand-dark transition-colors">
+            <i class="fas fa-exclamation-triangle text-brand-mid mt-0.5 flex-shrink-0"></i>
+            <span>Garage Door Won't Open? Here's What to Check First</span>
+          </a>
+          <div class="text-sm text-gray-400 flex items-start gap-2">
+            <i class="fas fa-door-open text-gray-300 mt-0.5 flex-shrink-0"></i>
+            <span>Steel vs. Wood Garage Doors <span class="text-xs">(coming soon)</span></span>
+          </div>
+          <div class="text-sm text-gray-400 flex items-start gap-2">
+            <i class="fas fa-shield-alt text-gray-300 mt-0.5 flex-shrink-0"></i>
+            <span>5 Garage Door Safety Tips <span class="text-xs">(coming soon)</span></span>
+          </div>
+        </div>
+        <a href="/blog" class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold hover:text-brand-dark">
+          View all posts <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </aside>
+  </div>
+</div>
 
 <!-- ═══════════════════════════ CTA BANNER ═══════════════════════════ -->
 <section class="bg-brand py-12 px-4 text-white text-center">
-  <p class="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">Need help now?</p>
+  <p class="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">Spring questions? We've got answers.</p>
   <h2 class="text-2xl sm:text-3xl font-black mb-4">Kansas City's Garage Door Experts</h2>
   <p class="text-blue-100 mb-6 max-w-md mx-auto text-sm">Same-day service available. Call or text — we pick up.</p>
   <a href="tel:8162899600"
@@ -365,7 +534,6 @@
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid md:grid-cols-[1.5fr_1fr_3fr_1fr] gap-12 mb-10">
 
-      <!-- Brand blurb -->
       <div>
         <div class="flex items-center gap-3 mb-3">
           <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center"><i class="fas fa-house text-base"></i></div>
@@ -379,7 +547,6 @@
         </p>
       </div>
 
-      <!-- Quick links -->
       <div>
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Quick Links</h4>
         <ul class="space-y-2 text-sm text-gray-400">
@@ -392,7 +559,6 @@
         </ul>
       </div>
 
-      <!-- Contact info -->
       <div>
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Contact</h4>
         <ul class="space-y-2.5 text-sm text-gray-400">
@@ -415,7 +581,6 @@
         </ul>
       </div>
 
-      <!-- Follow Us -->
       <div>
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Follow Us</h4>
         <div class="flex gap-2">
@@ -433,11 +598,22 @@
   </div>
 </footer>
 
+<!-- ═══════════════════════════ STICKY BOTTOM BAR ═══════════════════════════ -->
+<div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-brand-dark border-t border-brand/30 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
+  <div>
+    <p class="text-white font-bold text-sm">Spring questions?</p>
+    <p class="text-blue-300 text-xs">Same-day service available</p>
+  </div>
+  <a href="tel:8162899600"
+     class="flex-shrink-0 bg-white text-brand font-bold px-5 py-2.5 rounded-full text-sm flex items-center gap-2 shadow-lg hover:bg-blue-50 transition-colors">
+    <i class="fas fa-phone animate-ring text-xs"></i> Call Now
+  </a>
+</div>
+
 <!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
 <script>
-  // Mobile menu toggle
-  const hamburger   = document.getElementById('hamburger');
-  const mobileMenu  = document.getElementById('mobile-menu');
+  const hamburger    = document.getElementById('hamburger');
+  const mobileMenu   = document.getElementById('mobile-menu');
   const hamburgerIcon = document.getElementById('hamburger-icon');
 
   hamburger.addEventListener('click', () => {
@@ -498,12 +674,6 @@
     });
     if (!isOpen) { menu.classList.remove('hidden'); icon.style.transform = 'rotate(180deg)'; }
   }
-
-  // Scroll fade-in
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
 </body>
