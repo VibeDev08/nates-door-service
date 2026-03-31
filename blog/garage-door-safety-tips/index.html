@@ -12,8 +12,8 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Nate's Door Service — Garage Door Tips & Guides | Kansas City</title>
-  <meta name="description" content="Garage door tips, how-to guides, and expert advice from Nate's Door Service — Kansas City's trusted garage door pros." />
+  <title>5 Garage Door Safety Tips Every Homeowner Should Know | Nate's Door Service</title>
+  <meta name="description" content="Protect your family with five practical garage door safety tips every homeowner should know, from testing auto-reverse features to leaving springs and cables to a pro." />
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -46,27 +46,6 @@
     html { scroll-behavior: smooth; }
     body { padding-bottom: 80px; }
 
-    .card-hover {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.10);
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fade-in:nth-child(2) { transition-delay: 0.1s; }
-    .fade-in:nth-child(3) { transition-delay: 0.2s; }
-    .fade-in:nth-child(4) { transition-delay: 0.3s; }
-
     @keyframes ring {
       0%   { transform: rotate(0deg); }
       5%   { transform: rotate(5deg); }
@@ -84,6 +63,82 @@
       animation: ring 2.5s ease-in-out infinite;
       transform-origin: top center;
     }
+
+    /* Prose styles for article body */
+    .prose h2 {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-top: 2.25rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .prose h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose p {
+      color: #374151;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .prose ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .prose ul li {
+      color: #374151;
+      line-height: 1.75;
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+    .prose ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #3b82f6;
+    }
+    .prose ol {
+      counter-reset: list-counter;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .prose ol li {
+      color: #374151;
+      line-height: 1.75;
+      padding-left: 2rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+      counter-increment: list-counter;
+    }
+    .prose ol li::before {
+      content: counter(list-counter);
+      position: absolute;
+      left: 0;
+      top: 0.05rem;
+      background: #1d4ed8;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .prose strong { color: #111827; }
+    .prose a { color: #1d4ed8; text-decoration: underline; }
+    .prose a:hover { color: #1e3a8a; }
   </style>
 </head>
 <body class="font-sans text-gray-900 bg-white">
@@ -119,7 +174,6 @@
           <a href="/services/commercial"               class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-building w-4 text-brand-mid text-xs"></i> Commercial</a>
         </div>
       </div>
-
 
       <a href="/garage-door-service-areas-kansas-city" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Areas</a>
 
@@ -216,158 +270,244 @@
   </div>
 </nav>
 
-<!-- ═══════════════════════════ PAGE HERO ═══════════════════════════ -->
-<section class="bg-brand-dark text-white py-16 px-4">
-  <div class="max-w-4xl mx-auto text-center">
-    <p class="text-brand-mid text-sm font-semibold uppercase tracking-widest mb-3">From the Experts</p>
-    <h1 class="text-4xl sm:text-5xl font-black leading-tight mb-4">Garage Door Tips &amp; Guides</h1>
-    <p class="text-blue-200 text-lg max-w-xl mx-auto">Practical advice from Kansas City's trusted garage door pros — repairs, maintenance, buying guides, and more.</p>
-  </div>
-</section>
-
-<!-- ═══════════════════════════ BLOG POSTS ═══════════════════════════ -->
-<section class="py-16 px-4 bg-gray-50">
+<!-- ═══════════════════════════ ARTICLE HEADER ═══════════════════════════ -->
+<section class="bg-brand-dark text-white py-14 px-4">
   <div class="max-w-6xl mx-auto">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-blue-300 mb-5 flex items-center gap-2">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <i class="fas fa-chevron-right text-xs text-blue-500"></i>
+      <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+      <i class="fas fa-chevron-right text-xs text-blue-500"></i>
+      <span class="text-blue-200">Garage Door Safety Tips</span>
+    </nav>
 
-    <!-- Category pills (future-ready) -->
-    <div class="flex flex-wrap gap-2 mb-10">
-      <span class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">All</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Repairs</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Maintenance</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Buying Guides</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Safety</span>
+    <div class="flex items-center gap-2 mb-4">
+      <span class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">Safety</span>
+      <span class="text-blue-300 text-sm">
+        <time datetime="2026-03-31">March 2026</time>
+      </span>
+      <span class="text-blue-500 text-sm">&bull;</span>
+      <span class="text-blue-300 text-sm">7 min read</span>
     </div>
 
-    <!-- Post grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <h1 class="text-3xl sm:text-4xl font-black leading-tight mb-4">
+      5 Garage Door Safety Tips Every Homeowner Should Know
+    </h1>
+    <p class="text-blue-200 text-lg leading-relaxed max-w-2xl">
+      A garage door is the largest moving object in most homes. These five practical habits help protect your family, prevent avoidable damage, and make it easier to spot trouble before it turns into an emergency.
+    </p>
 
-      <!-- Post 1 — LIVE -->
-      <a href="/blog/garage-door-wont-open" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-exclamation-triangle text-yellow-400/60 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-garage-open text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Troubleshooting Guide</p>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Repairs</span>
-            <span class="text-gray-400 text-xs">Feb 27, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">Garage Door Won't Open? Here's What to Check First</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">Walk through the most common reasons a garage door refuses to open — from dead remotes to broken springs — and learn what you can safely fix yourself.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
+    <p class="mt-4 text-sm text-blue-300 flex items-center gap-2">
+      <i class="fas fa-map-marker-alt text-brand-mid"></i>
+      Serving homeowners across the Greater Kansas City area, Nate's Door Service provides same-day repair and honest advice when a door no longer feels safe.
+    </p>
 
-      <!-- Post 2 — LIVE -->
-      <a href="/blog/how-long-do-garage-door-springs-last" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-circle-notch text-brand-mid/40 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-tools text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Maintenance Guide</p>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Maintenance</span>
-            <span class="text-gray-400 text-xs">Mar 18, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">How Long Do Garage Door Springs Last?</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">Most springs are rated for 10,000 cycles — but that number tells only part of the story. Learn what actually determines lifespan and the warning signs to watch for.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
-
-      <!-- Post 3 — LIVE -->
-      <a href="/blog/steel-vs-wood-garage-doors" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-door-open text-brand-mid/40 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-home text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Buying Guide</p>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Buying Guides</span>
-            <span class="text-gray-400 text-xs">Mar 22, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">Steel vs. Wood Garage Doors: Which Is Right for You?</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">A practical side-by-side look at cost, durability, insulation, upkeep, and curb appeal so you can choose the right garage door material for your home.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
-
-      <!-- Post 4 — LIVE -->
-      <a href="/blog/garage-door-safety-tips" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-shield-alt text-brand-mid/40 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-shield-alt text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Safety Guide</p>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Safety</span>
-            <span class="text-gray-400 text-xs">Mar 31, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">5 Garage Door Safety Tips Every Homeowner Should Know</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">A practical homeowner's guide to testing auto-reverse, checking sensors, keeping kids safe, and knowing when a repair issue has become a safety issue.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
-
-      <!-- Post 5 — Coming soon -->
-      <div class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col opacity-60">
-        <div class="bg-gray-100 h-44 flex items-center justify-center">
-          <i class="fas fa-snowflake text-gray-300 text-5xl"></i>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-gray-100 text-gray-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Maintenance</span>
-            <span class="text-gray-300 text-xs">Coming soon</span>
-          </div>
-          <h2 class="font-bold text-gray-400 text-base leading-snug mb-2">Winterizing Your Garage Door in Kansas City</h2>
-          <p class="text-gray-300 text-sm leading-relaxed flex-1">Cold weather is hard on garage door components. Here's how to prep your door before the KC winter hits.</p>
-        </div>
+    <div class="mt-6 flex items-center gap-3">
+      <div class="bg-brand text-white rounded-full w-9 h-9 flex items-center justify-center"><i class="fas fa-house text-sm"></i></div>
+      <div>
+        <div class="font-semibold text-sm text-white">Nate's Door Service</div>
+        <div class="text-xs text-blue-300">Kansas City Garage Door Experts</div>
       </div>
-
-      <!-- Post 6 — Coming soon -->
-      <div class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col opacity-60">
-        <div class="bg-gray-100 h-44 flex items-center justify-center">
-          <i class="fas fa-bolt text-gray-300 text-5xl"></i>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-gray-100 text-gray-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Repairs</span>
-            <span class="text-gray-300 text-xs">Coming soon</span>
-          </div>
-          <h2 class="font-bold text-gray-400 text-base leading-snug mb-2">Why Is My Garage Door Opener So Loud?</h2>
-          <p class="text-gray-300 text-sm leading-relaxed flex-1">Chain, belt, or screw drive — what's normal noise vs. a sign of something about to break.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════ ARTICLE BODY ═══════════════════════════ -->
+<div class="max-w-6xl mx-auto px-4 py-12">
+  <div class="grid lg:grid-cols-[1fr_260px] gap-10 items-start">
+
+    <!-- Main content -->
+    <article class="prose">
+
+      <p>
+        Most homeowners think about their garage door only when it refuses to open. But from a safety standpoint, that is backward. A garage door weighs hundreds of pounds, moves under spring tension, and cycles up and down around kids, pets, cars, and stored belongings every day.
+      </p>
+      <p>
+        The good news is that garage door safety is not complicated. A few simple checks and habits go a long way toward preventing injuries and catching problems early. Here are the five safety tips we wish every homeowner followed.
+      </p>
+
+      <!-- Quick Answer — AEO block -->
+      <div class="not-prose bg-brand-light border-l-4 border-brand rounded-r-xl px-5 py-4 my-6">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand mb-2">Quick Answer</p>
+        <p class="text-gray-800 text-sm leading-relaxed">The most important garage door safety tips are to test the auto-reverse system monthly, keep the photo-eye sensors clean and aligned, keep children and pets away from a moving door, store remotes out of reach, and never attempt DIY spring or cable repairs. If the door feels heavy, moves unevenly, or makes new noises, stop using it and have it inspected.</p>
+      </div>
+
+      <h2>1. Test the Auto-Reverse Feature Once a Month</h2>
+      <p>
+        Every modern garage door opener should reverse direction when it meets resistance. That safety system exists for one reason: to keep the door from closing on a person, pet, or object. It is one of the most important features on the entire system, and it should be tested regularly.
+      </p>
+      <p>
+        The simplest test is to place a solid object like a 2x4 laid flat on the floor beneath the door. Close the door using the opener. When the bottom of the door touches the board, it should reverse almost immediately.
+      </p>
+      <ul>
+        <li>If the door does not reverse, stop using the opener until the issue is corrected</li>
+        <li>Do not substitute a soft item like a bag or towel for the test object</li>
+        <li>If the door reverses too late or hits hard before reversing, the force setting may need adjustment</li>
+      </ul>
+      <p>
+        If you are not comfortable adjusting opener settings, call a technician. A safety system that only "mostly works" is not good enough.
+      </p>
+
+      <h2>2. Keep the Safety Sensors Clean and Aligned</h2>
+      <p>
+        The small photo-eye sensors near the bottom of the door tracks are easy to ignore, but they cause a surprising number of safety and reliability issues. If one sensor gets bumped, blocked, or covered in dust, the opener may refuse to close or may behave unpredictably.
+      </p>
+      <ul>
+        <li>Make sure both sensor lights are on and steady, not blinking</li>
+        <li>Wipe the lenses gently with a clean, dry cloth</li>
+        <li>Check for storage items, tools, leaves, or spider webs blocking the beam</li>
+        <li>If the brackets are loose, have them tightened so they stay aligned</li>
+      </ul>
+      <p>
+        This matters even more in garages where bikes, yard tools, and sports gear live near the opening. One small bump can knock a sensor out of line and create a false sense that the opener is "acting up" when the real issue is safety-related.
+      </p>
+
+      <h2>3. Never Walk Under a Moving Door</h2>
+      <p>
+        It sounds basic, but a lot of people get comfortable cutting under a closing door or jogging through at the last second. That habit is not worth the risk. Even a properly working door can come down faster than expected, and a door with worn springs, bad rollers, or opener issues is even less predictable.
+      </p>
+      <p>
+        Make it a house rule:
+      </p>
+      <ul>
+        <li>Wait until the door is fully open before walking or driving through</li>
+        <li>Never "race" the door on the way out</li>
+        <li>Keep kids and pets well clear anytime the door is moving</li>
+        <li>Do not stand under the door to watch whether it closes all the way</li>
+      </ul>
+      <p>
+        This is especially important with older doors that may not have today’s safety features or may not have been maintained well.
+      </p>
+
+      <h2>4. Keep Remotes and Wall Controls Away From Children</h2>
+      <p>
+        Garage door remotes are easy to treat like harmless buttons, but to a child they are a way to activate the heaviest moving system in the home. Remotes left in reach and low-mounted wall buttons invite curiosity.
+      </p>
+      <ul>
+        <li>Store extra remotes out of reach of young children</li>
+        <li>Mount wall controls at least five feet above the floor</li>
+        <li>Teach kids that the garage door is not a toy</li>
+        <li>Use the lock or vacation feature on the wall station when appropriate</li>
+      </ul>
+      <p>
+        If your opener is tied into a vehicle visor remote or smart app, this tip still applies. Children do not need unsupervised access to door controls just because the controls are convenient for adults.
+      </p>
+
+      <h2>5. Leave Springs, Cables, and Major Repairs to a Pro</h2>
+      <p>
+        This is the biggest one. Rollers, hinges, and tracks can often be inspected visually by a homeowner. Springs and lift cables are different. They are under heavy tension and can cause severe injury in an instant if handled incorrectly.
+      </p>
+      <p>
+        Call a professional right away if you notice any of these warning signs:
+      </p>
+      <ul>
+        <li>A loud bang from the garage followed by a very heavy door</li>
+        <li>A visible gap in the torsion spring above the door</li>
+        <li>Frayed lift cables or a cable that has come off the drum</li>
+        <li>The door lifting crookedly or one side hanging lower</li>
+        <li>The opener straining to lift the door or stopping partway</li>
+      </ul>
+
+      <div class="bg-red-50 border border-red-200 rounded-xl p-5 my-6">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-exclamation-triangle text-red-500 mt-0.5 text-lg flex-shrink-0"></i>
+          <div>
+            <p class="font-bold text-red-800 mb-1">Do not attempt DIY spring or cable repairs.</p>
+            <p class="text-red-700 text-sm leading-relaxed">Torsion springs and lift cables store enough force to cause serious injury. If a door feels unusually heavy, opens unevenly, or has a broken spring, stop operating it and call a trained technician.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Quick Seasonal Safety Checklist</h2>
+      <p>
+        If you want one simple routine, run through this checklist at the start of spring and fall:
+      </p>
+      <ol>
+        <li><strong>Test auto-reverse</strong> with a solid object under the door</li>
+        <li><strong>Clean the photo-eye sensors</strong> and confirm both indicator lights are steady</li>
+        <li><strong>Listen to the door</strong> for new grinding, squeaking, or popping sounds</li>
+        <li><strong>Watch one full cycle</strong> to see whether the door moves smoothly and evenly</li>
+        <li><strong>Lubricate moving metal parts</strong> like rollers, hinges, and springs with an appropriate garage door lubricant</li>
+      </ol>
+      <p>
+        That five-minute habit catches a lot of small problems before they turn into a stuck door or a safety call.
+      </p>
+
+      <h2>When "Safety" Is Really a Repair Issue</h2>
+      <p>
+        If your door jerks, slams, reverses randomly, or feels heavier than it used to, do not just work around it. Those are often early signs of worn springs, tired rollers, bad sensor alignment, opener setting issues, or track problems. Waiting usually makes the repair bigger and can make the system less safe in the meantime.
+      </p>
+      <p>
+        At Nate's Door Service, we help homeowners across Kansas City sort out whether a garage door issue is a quick adjustment or something that needs immediate repair. If your door does not feel safe, <a href="tel:8162899600">call 816.289.9600</a> and we will help you figure out the next step.
+      </p>
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="space-y-6 lg:sticky lg:top-24">
+
+      <!-- CTA card -->
+      <div class="bg-brand-dark text-white rounded-2xl p-6 text-center shadow-lg">
+        <div class="bg-brand/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+          <i class="fas fa-phone text-white text-lg animate-ring"></i>
+        </div>
+        <p class="font-black text-lg mb-1">Need a hand?</p>
+        <p class="text-blue-200 text-sm mb-4 leading-relaxed">If your door does not feel safe, we can take a look.</p>
+        <a href="tel:8162899600"
+           class="block bg-white text-brand font-bold py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm">
+          816.289.9600
+        </a>
+        <a href="/#contact"
+           class="block mt-2 border border-white/30 text-white font-semibold py-3 rounded-xl hover:bg-white/10 transition-colors text-sm">
+          Request a Quote
+        </a>
+      </div>
+
+      <!-- About card -->
+      <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">About the Author</p>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0"><i class="fas fa-house text-sm"></i></div>
+          <div>
+            <p class="font-bold text-sm text-gray-900">Nate's Door Service</p>
+            <p class="text-xs text-gray-500">15+ years in Kansas City</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Kansas City's trusted garage door experts since 2010, serving the entire KC metro with residential and commercial installation, repair, and spring replacement.</p>
+      </div>
+
+      <!-- More articles -->
+      <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-3">More Articles</p>
+        <div class="space-y-3">
+          <a href="/blog/garage-door-wont-open" class="text-sm text-brand flex items-start gap-2 hover:text-brand-dark transition-colors">
+            <i class="fas fa-exclamation-triangle text-brand-mid mt-0.5 flex-shrink-0"></i>
+            <span>Garage Door Won't Open? Here's What to Check First</span>
+          </a>
+          <a href="/blog/how-long-do-garage-door-springs-last" class="text-sm text-brand flex items-start gap-2 hover:text-brand-dark transition-colors">
+            <i class="fas fa-tools text-brand-mid mt-0.5 flex-shrink-0"></i>
+            <span>How Long Do Garage Door Springs Last?</span>
+          </a>
+          <a href="/blog/steel-vs-wood-garage-doors" class="text-sm text-brand flex items-start gap-2 hover:text-brand-dark transition-colors">
+            <i class="fas fa-door-open text-brand-mid mt-0.5 flex-shrink-0"></i>
+            <span>Steel vs. Wood Garage Doors: Which Is Right for You?</span>
+          </a>
+        </div>
+        <a href="/blog" class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold hover:text-brand-dark">
+          View all posts <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </aside>
+  </div>
+</div>
 
 <!-- ═══════════════════════════ CTA BANNER ═══════════════════════════ -->
 <section class="bg-brand py-12 px-4 text-white text-center">
-  <p class="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">Need help now?</p>
+  <p class="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">Want a safer garage door?</p>
   <h2 class="text-2xl sm:text-3xl font-black mb-4">Kansas City's Garage Door Experts</h2>
-  <p class="text-blue-100 mb-6 max-w-md mx-auto text-sm">Same-day service available. Call or text — we pick up.</p>
+  <p class="text-blue-100 mb-6 max-w-md mx-auto text-sm">Same-day service available. Call or text and we will help you sort out what is safe to fix and what needs a pro.</p>
   <a href="tel:8162899600"
      class="inline-flex items-center gap-2 bg-white text-brand font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors shadow-lg text-sm">
     <i class="fas fa-phone animate-ring"></i> 816.289.9600
@@ -379,7 +519,6 @@
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid md:grid-cols-[1.5fr_1fr_3fr_1fr] gap-12 mb-10">
 
-      <!-- Brand blurb -->
       <div>
         <div class="flex items-center gap-3 mb-3">
           <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center"><i class="fas fa-house text-base"></i></div>
@@ -393,7 +532,6 @@
         </p>
       </div>
 
-      <!-- Quick links -->
       <div>
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Quick Links</h4>
         <ul class="space-y-2 text-sm text-gray-400">
@@ -406,7 +544,6 @@
         </ul>
       </div>
 
-      <!-- Contact info -->
       <div>
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Contact</h4>
         <ul class="space-y-2.5 text-sm text-gray-400">
@@ -420,16 +557,15 @@
           </li>
           <li class="flex items-start gap-2.5">
             <i class="fas fa-map-marker-alt text-brand-mid w-4 mt-0.5"></i>
-            <span>Greater Kansas City Area – Missouri &amp; Kansas</span>
+            <span>Greater Kansas City Area &ndash; Missouri &amp; Kansas</span>
           </li>
           <li class="flex items-start gap-2.5">
             <i class="fas fa-clock text-brand-mid w-4 mt-0.5"></i>
-            <span>Mon–Sun 8AM–5PM<br /><span class="text-brand-mid font-medium">Emergency: 24/7</span></span>
+            <span>Mon&ndash;Sun 8AM&ndash;5PM<br /><span class="text-brand-mid font-medium">Emergency: 24/7</span></span>
           </li>
         </ul>
       </div>
 
-      <!-- Follow Us -->
       <div>
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Follow Us</h4>
         <div class="flex gap-2">
@@ -442,16 +578,27 @@
     </div>
 
     <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
-      &copy; 2026 Nate's Door Service. All rights reserved. &bull; Greater Kansas City Area – Missouri &amp; Kansas
+      &copy; 2026 Nate's Door Service. All rights reserved. &bull; Greater Kansas City Area &ndash; Missouri &amp; Kansas
     </div>
   </div>
 </footer>
 
+<!-- ═══════════════════════════ STICKY BOTTOM BAR ═══════════════════════════ -->
+<div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-brand-dark border-t border-brand/30 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
+  <div>
+    <p class="text-white font-bold text-sm">Safety concern?</p>
+    <p class="text-blue-300 text-xs">Same-day service available</p>
+  </div>
+  <a href="tel:8162899600"
+     class="flex-shrink-0 bg-white text-brand font-bold px-5 py-2.5 rounded-full text-sm flex items-center gap-2 shadow-lg hover:bg-blue-50 transition-colors">
+    <i class="fas fa-phone animate-ring text-xs"></i> Call Now
+  </a>
+</div>
+
 <!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
 <script>
-  // Mobile menu toggle
-  const hamburger   = document.getElementById('hamburger');
-  const mobileMenu  = document.getElementById('mobile-menu');
+  const hamburger    = document.getElementById('hamburger');
+  const mobileMenu   = document.getElementById('mobile-menu');
   const hamburgerIcon = document.getElementById('hamburger-icon');
 
   hamburger.addEventListener('click', () => {
@@ -512,12 +659,6 @@
     });
     if (!isOpen) { menu.classList.remove('hidden'); icon.style.transform = 'rotate(180deg)'; }
   }
-
-  // Scroll fade-in
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
 </body>
