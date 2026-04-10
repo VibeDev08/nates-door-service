@@ -59,11 +59,15 @@
     /* Extra bottom padding so sticky bar never covers content */
     body { padding-bottom: 80px; }
 
-    /* Hero: dark blue gradient layered over the action photo */
+    /* Hero: light overlay keeps text readable without hiding the photo */
     .hero-bg {
       background:
-        linear-gradient(135deg, rgba(30,58,138,0.72) 0%, rgba(29,78,216,0.65) 100%),
-        url('photos/Hero.webp') center center / cover no-repeat;
+        linear-gradient(90deg, rgba(15, 23, 42, 0.48) 0%, rgba(15, 23, 42, 0.32) 42%, rgba(15, 23, 42, 0.14) 100%),
+        url('photos/House.jpeg') center center / cover no-repeat;
+    }
+
+    .hero-copy {
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
     }
 
     /* Subtle lift on hover for cards */
@@ -472,7 +476,7 @@
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
       <!-- Left: Copy -->
-      <div class="fade-in">
+      <div class="fade-in hero-copy">
         <!-- Trust pill -->
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6 text-sm font-medium">
           <i class="fas fa-shield-alt text-yellow-400"></i>
