@@ -13,16 +13,12 @@
   <meta name="google-site-verification" content="pZsRX1EdwzCLRkqU4b7ge_n5fbzZUxisv6Cw7" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Nate's Door Service — Garage Door Tips & Guides | Kansas City</title>
-  <meta name="description" content="Garage door tips, how-to guides, and expert advice from Nate's Door Service — Kansas City's trusted garage door pros." />
+  <title>Contact Us | Nate's Door Service — Kansas City Garage Door Repair</title>
+  <meta name="description" content="Contact Nate's Door Service for garage door repair, installation, and emergency service in Kansas City. Call 816.289.9600 or fill out our quick form." />
+  <link rel="canonical" href="https://www.natesdoorservice.com/contact" />
 
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -47,27 +43,6 @@
     html { scroll-behavior: smooth; }
     body { padding-bottom: 80px; }
 
-    .card-hover {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.10);
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fade-in:nth-child(2) { transition-delay: 0.1s; }
-    .fade-in:nth-child(3) { transition-delay: 0.2s; }
-    .fade-in:nth-child(4) { transition-delay: 0.3s; }
-
     @keyframes ring {
       0%   { transform: rotate(0deg); }
       5%   { transform: rotate(5deg); }
@@ -85,11 +60,26 @@
       animation: ring 2.5s ease-in-out infinite;
       transform-origin: top center;
     }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.08s; }
+    .fade-in:nth-child(3) { transition-delay: 0.16s; }
+    .fade-in:nth-child(4) { transition-delay: 0.24s; }
+    .fade-in:nth-child(5) { transition-delay: 0.32s; }
+    .fade-in:nth-child(6) { transition-delay: 0.40s; }
   </style>
 </head>
-<body class="font-sans text-gray-900 bg-white">
+<body class="font-sans text-gray-800 bg-white antialiased">
 
-<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+
+<!-- ============================================================
+     NAVIGATION — sticky, logo + links + mobile hamburger
+     ============================================================ -->
 <nav id="navbar" class="bg-white shadow-md sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
 
@@ -97,8 +87,8 @@
     <a href="/" class="flex items-center gap-2.5 no-underline">
       <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center select-none"><i class="fas fa-house text-base"></i></div>
       <div>
-        <div class="font-black text-brand-dark text-base sm:text-lg leading-tight whitespace-nowrap">Nate's Door Service</div>
-        <div class="text-xs text-gray-400 leading-tight hidden sm:block whitespace-nowrap">Excellence in Every Installation</div>
+        <div class="font-black text-brand-dark text-base sm:text-lg leading-tight">Nate's Door Service</div>
+        <div class="text-xs text-gray-400 leading-tight hidden sm:block">Excellence in Every Installation</div>
       </div>
     </a>
 
@@ -113,14 +103,13 @@
         </button>
         <div id="services-dropdown"
              class="hidden absolute top-full left-0 mt-3 w-60 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
-          <a href="/services/spring-repair"      class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-tools w-4 text-brand-mid text-xs"></i> Spring Repair</a>
-          <a href="/services/opener-repair"      class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-cog w-4 text-brand-mid text-xs"></i> Opener Repair</a>
+          <a href="/services/spring-repair"         class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-tools w-4 text-brand-mid text-xs"></i> Spring Repair</a>
+          <a href="/services/opener-repair"         class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-cog w-4 text-brand-mid text-xs"></i> Opener Repair</a>
           <a href="/services/garage-door-repair"       class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-door-open w-4 text-brand-mid text-xs"></i> Door Repair</a>
           <a href="/services/garage-door-installation" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-home w-4 text-brand-mid text-xs"></i> Door Installation</a>
           <a href="/services/commercial"               class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-building w-4 text-brand-mid text-xs"></i> Commercial</a>
         </div>
       </div>
-
 
       <a href="/garage-door-service-areas-kansas-city" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Areas</a>
 
@@ -151,7 +140,7 @@
         </div>
       </div>
 
-      <a href="/contact" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Contact</a>
+      <a href="/contact" class="text-brand font-semibold text-sm transition-colors">Contact</a>
       <a href="tel:8162899600"
          class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm">
         <i class="fas fa-phone animate-ring text-xs"></i> Call Now
@@ -191,8 +180,8 @@
           About <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="mobile-about-icon"></i>
         </button>
         <div id="mobile-about-menu" class="hidden pl-4 py-1 space-y-0.5">
-          <a href="/about-nate"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-user w-4 text-brand-mid text-xs"></i> About Nate</a>
-          <a href="/#testimonials"   onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-star w-4 text-brand-mid text-xs"></i> Reviews</a>
+          <a href="/about-nate"    onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-user w-4 text-brand-mid text-xs"></i> About Nate</a>
+          <a href="/#testimonials"  onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-star w-4 text-brand-mid text-xs"></i> Reviews</a>
         </div>
       </div>
 
@@ -202,13 +191,13 @@
           Resources <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="mobile-resources-icon"></i>
         </button>
         <div id="mobile-resources-menu" class="hidden pl-4 py-1 space-y-0.5">
-          <a href="/blog"           onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-newspaper w-4 text-brand-mid text-xs"></i> Blog</a>
-          <a href="/#faq"           onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-question-circle w-4 text-brand-mid text-xs"></i> FAQ</a>
-          <a href="/#gallery"       onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-images w-4 text-brand-mid text-xs"></i> Gallery</a>
+          <a href="/blog"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-newspaper w-4 text-brand-mid text-xs"></i> Blog</a>
+          <a href="/#faq"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-question-circle w-4 text-brand-mid text-xs"></i> FAQ</a>
+          <a href="/#gallery"  onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-images w-4 text-brand-mid text-xs"></i> Gallery</a>
         </div>
       </div>
 
-      <a href="/contact" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Contact</a>
+      <a href="/contact" onclick="closeMobileMenu()" class="text-brand font-semibold py-2.5 border-b border-gray-50 text-sm">Contact</a>
       <a href="tel:8162899600"
          class="mt-2 bg-brand hover:bg-brand-dark text-white px-4 py-3 rounded-xl font-semibold text-center text-sm transition-colors flex items-center justify-center gap-2">
         <i class="fas fa-phone animate-ring"></i> 816.289.9600
@@ -217,172 +206,130 @@
   </div>
 </nav>
 
-<!-- ═══════════════════════════ PAGE HERO ═══════════════════════════ -->
-<section class="bg-brand-dark text-white py-16 px-4">
-  <div class="max-w-4xl mx-auto text-center">
-    <p class="text-brand-mid text-sm font-semibold uppercase tracking-widest mb-3">From the Experts</p>
-    <h1 class="text-4xl sm:text-5xl font-black leading-tight mb-4">Garage Door Tips &amp; Guides</h1>
-    <p class="text-blue-200 text-lg max-w-xl mx-auto">Practical advice from Kansas City's trusted garage door pros — repairs, maintenance, buying guides, and more.</p>
+
+<!-- ============================================================
+     PAGE HERO
+     ============================================================ -->
+<section class="bg-gray-50 py-10 md:py-14 border-b border-gray-100">
+  <div class="max-w-6xl mx-auto px-4 text-center fade-in">
+    <span class="text-brand font-semibold text-xs uppercase tracking-widest">Get In Touch</span>
+    <h1 class="text-3xl md:text-4xl font-black text-gray-900 mt-2 mb-3">Contact Nate's Door Service</h1>
+    <p class="text-gray-500 text-sm max-w-xl mx-auto">
+      Fill out the form below or give us a call. Same-day response during business hours.
+    </p>
+    <nav class="mt-4 text-xs text-gray-400" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-brand transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-600 font-medium">Contact</span>
+    </nav>
   </div>
 </section>
 
-<!-- ═══════════════════════════ BLOG POSTS ═══════════════════════════ -->
-<section class="py-16 px-4 bg-gray-50">
-  <div class="max-w-6xl mx-auto">
 
-    <!-- Category pills (future-ready) -->
-    <div class="flex flex-wrap gap-2 mb-10">
-      <span class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">All</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Repairs</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Maintenance</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Buying Guides</span>
-      <span class="bg-white border border-gray-200 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:border-brand hover:text-brand transition-colors">Safety</span>
-    </div>
+<!-- ============================================================
+     CONTACT SECTION
+     ============================================================ -->
+<section class="py-12 md:py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
 
-    <!-- Post grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid lg:grid-cols-5 gap-10">
 
-      <!-- Post 1 — LIVE -->
-      <a href="/blog/garage-door-wont-open" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-exclamation-triangle text-yellow-400/60 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-garage-open text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Troubleshooting Guide</p>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Repairs</span>
-            <span class="text-gray-400 text-xs">Feb 27, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">Garage Door Won't Open? Here's What to Check First</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">Walk through the most common reasons a garage door refuses to open — from dead remotes to broken springs — and learn what you can safely fix yourself.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
+      <!-- Contact info -->
+      <div class="lg:col-span-2 fade-in space-y-6">
 
-      <!-- Post 2 — LIVE -->
-      <a href="/blog/how-long-do-garage-door-springs-last" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-circle-notch text-brand-mid/40 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-tools text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Maintenance Guide</p>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-phone animate-ring text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Call Us</p>
+            <a href="tel:8162899600" class="text-gray-500 hover:text-brand text-sm block">816.289.9600</a>
           </div>
         </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Maintenance</span>
-            <span class="text-gray-400 text-xs">Mar 18, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">How Long Do Garage Door Springs Last?</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">Most springs are rated for 10,000 cycles — but that number tells only part of the story. Learn what actually determines lifespan and the warning signs to watch for.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
 
-      <!-- Post 3 — LIVE -->
-      <a href="/blog/steel-vs-wood-garage-doors" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-door-open text-brand-mid/40 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-home text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Buying Guide</p>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-envelope text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Email Us</p>
+            <a href="mailto:contact@natesdoorservice.com" class="text-gray-500 hover:text-brand text-sm transition-colors">contact@natesdoorservice.com</a>
           </div>
         </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Buying Guides</span>
-            <span class="text-gray-400 text-xs">Mar 22, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">Steel vs. Wood Garage Doors: Which Is Right for You?</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">A practical side-by-side look at cost, durability, insulation, upkeep, and curb appeal so you can choose the right garage door material for your home.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
 
-      <!-- Post 4 — LIVE -->
-      <a href="/blog/garage-door-safety-tips" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-shield-alt text-brand-mid/40 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-shield-alt text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Safety Guide</p>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-clock text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Business Hours</p>
+            <p class="text-gray-500 text-sm">Mon – Sun: 8AM – 5PM</p>
           </div>
         </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Safety</span>
-            <span class="text-gray-400 text-xs">Mar 31, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">5 Garage Door Safety Tips Every Homeowner Should Know</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">A practical homeowner's guide to testing auto-reverse, checking sensors, keeping kids safe, and knowing when a repair issue has become a safety issue.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
 
-      <!-- Post 5 — LIVE -->
-      <a href="/blog/why-is-my-garage-door-opener-so-loud" class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col no-underline group">
-        <div class="bg-brand-dark h-44 flex items-center justify-center relative overflow-hidden">
-          <i class="fas fa-bolt text-brand-mid/40 text-8xl absolute"></i>
-          <div class="relative z-10 text-center px-4">
-            <i class="fas fa-volume-high text-brand-mid text-4xl mb-2"></i>
-            <p class="text-white font-bold text-sm leading-tight">Repair Guide</p>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-bolt text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Emergency Service</p>
+            <p class="text-gray-500 text-sm">Available after hours for emergencies</p>
           </div>
         </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-brand-light text-brand text-xs font-semibold px-2.5 py-0.5 rounded-full">Repairs</span>
-            <span class="text-gray-400 text-xs">Apr 13, 2026</span>
-          </div>
-          <h2 class="font-bold text-gray-900 text-base leading-snug mb-2 group-hover:text-brand transition-colors">Why Is My Garage Door Opener So Loud?</h2>
-          <p class="text-gray-500 text-sm leading-relaxed flex-1">Chain, belt, or screw drive: learn what's normal, what's not, and when extra noise points to worn rollers, loose hardware, or opener trouble.</p>
-          <div class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold">
-            Read article <i class="fas fa-arrow-right text-xs mt-0.5"></i>
-          </div>
-        </div>
-      </a>
 
-      <!-- Post 6 — Coming soon -->
-      <div class="fade-in bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col opacity-60">
-        <div class="bg-gray-100 h-44 flex items-center justify-center">
-          <i class="fas fa-snowflake text-gray-300 text-5xl"></i>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="bg-gray-100 text-gray-400 text-xs font-semibold px-2.5 py-0.5 rounded-full">Maintenance</span>
-            <span class="text-gray-300 text-xs">Coming soon</span>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-map-marker-alt text-brand"></i>
           </div>
-          <h2 class="font-bold text-gray-400 text-base leading-snug mb-2">Winterizing Your Garage Door in Kansas City</h2>
-          <p class="text-gray-300 text-sm leading-relaxed flex-1">Cold weather is hard on garage door components. Here's how to prep your door before the KC winter hits.</p>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Service Area</p>
+            <p class="text-gray-500 text-sm">Greater Kansas City Area – Missouri &amp; Kansas</p>
+          </div>
         </div>
+
+      </div>
+
+      <!-- Contact form -->
+      <div class="lg:col-span-3 fade-in">
+        <form id="contact-form" novalidate class="bg-gray-50 rounded-2xl p-6 md:p-8 space-y-4 shadow-sm border border-gray-100">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Full Name *</label>
+              <input type="text" name="name" required placeholder="Your name"
+                class="w-full border border-gray-200 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Phone Number *</label>
+              <input type="tel" name="phone" required placeholder="(816) 000-0000"
+                class="w-full border border-gray-200 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Email Address *</label>
+            <input type="email" name="email" required placeholder="your@email.com"
+              class="w-full border border-gray-200 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Message *</label>
+            <textarea name="message" required rows="4" placeholder="Describe your garage door issue or project..."
+              class="w-full border border-gray-200 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors resize-none"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-brand hover:bg-brand-dark text-white py-3.5 rounded-xl font-semibold text-base transition-colors flex items-center justify-center gap-2 shadow-sm">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p id="contact-form-status" class="text-center text-sm hidden"></p>
+        </form>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ CTA BANNER ═══════════════════════════ -->
-<section class="bg-brand py-12 px-4 text-white text-center">
-  <p class="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">Need help now?</p>
-  <h2 class="text-2xl sm:text-3xl font-black mb-4">Kansas City's Garage Door Experts</h2>
-  <p class="text-blue-100 mb-6 max-w-md mx-auto text-sm">Same-day service available. Call or text — we pick up.</p>
-  <a href="tel:8162899600"
-     class="inline-flex items-center gap-2 bg-white text-brand font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors shadow-lg text-sm">
-    <i class="fas fa-phone animate-ring"></i> 816.289.9600
-  </a>
-</section>
 
-<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer class="bg-gray-900 text-white pt-12 pb-8">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid md:grid-cols-[1.5fr_1fr_3fr_1fr] gap-12 mb-10">
@@ -406,10 +353,10 @@
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Quick Links</h4>
         <ul class="space-y-2 text-sm text-gray-400">
           <li><a href="/#services"     class="hover:text-white transition-colors">Services</a></li>
-          <li><a href="/about-nate"        class="hover:text-white transition-colors">About Nate</a></li>
+          <li><a href="/about-nate"    class="hover:text-white transition-colors">About Nate</a></li>
           <li><a href="/#testimonials" class="hover:text-white transition-colors">Reviews</a></li>
-          <li><a href="/garage-door-service-areas-kansas-city" class="hover:text-white transition-colors">Service Area</a></li>
-          <li><a href="/contact"      class="hover:text-white transition-colors">Contact</a></li>
+          <li><a href="/garage-door-service-areas-kansas-city" class="hover:text-white transition-colors">Service Areas</a></li>
+          <li><a href="/contact"       class="hover:text-white transition-colors">Contact</a></li>
           <li><a href="/blog"          class="hover:text-white transition-colors">Blog</a></li>
         </ul>
       </div>
@@ -448,26 +395,55 @@
       </div>
 
     </div>
-
     <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
       &copy; 2026 Nate's Door Service. All rights reserved. &bull; Greater Kansas City Area – Missouri &amp; Kansas
     </div>
   </div>
 </footer>
 
-<!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
+
+<!-- ═══════════════════ STICKY BOTTOM BAR ═══════════════════ -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-brand shadow-[0_-4px_20px_rgba(0,0,0,0.2)]">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-2 min-w-0">
+      <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+        <i class="fas fa-phone-alt animate-ring text-white text-sm"></i>
+      </div>
+      <p class="text-white text-sm font-medium truncate">Call to get a <span class="font-bold">free quote</span> today!</p>
+    </div>
+    <a href="tel:8162899600"
+       class="bg-white text-brand hover:bg-blue-50 px-5 py-2 rounded-full font-bold text-sm whitespace-nowrap transition-colors flex items-center gap-2 shadow-md shrink-0">
+      <i class="fas fa-phone animate-ring text-xs"></i> 816.289.9600
+    </a>
+  </div>
+</div>
+
+
+<!-- ═══════════════════ SCRIPTS ═══════════════════ -->
 <script>
-  // Mobile menu toggle
-  const hamburger   = document.getElementById('hamburger');
-  const mobileMenu  = document.getElementById('mobile-menu');
+  /* ---- Mobile Menu ---- */
+  const hamburger     = document.getElementById('hamburger');
+  const mobileMenu    = document.getElementById('mobile-menu');
   const hamburgerIcon = document.getElementById('hamburger-icon');
 
   hamburger.addEventListener('click', () => {
     const isOpen = !mobileMenu.classList.contains('hidden');
-    mobileMenu.classList.toggle('hidden', isOpen);
-    hamburgerIcon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
+    mobileMenu.classList.toggle('hidden');
     hamburger.setAttribute('aria-expanded', String(!isOpen));
+    hamburgerIcon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
   });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburgerIcon.className = 'fas fa-bars text-2xl';
+    ['mobile-services-menu','mobile-about-menu','mobile-resources-menu'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.classList.add('hidden');
+    });
+    ['mobile-services-icon','mobile-about-icon','mobile-resources-icon'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.style.transform = '';
+    });
+  }
 
   function closeAllDropdowns() {
     ['services','about','resources'].forEach(name => {
@@ -496,18 +472,6 @@
     if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMobileMenu();
   });
 
-  function closeMobileMenu() {
-    mobileMenu.classList.add('hidden');
-    hamburger.setAttribute('aria-expanded', 'false');
-    hamburgerIcon.className = 'fas fa-bars text-2xl';
-    ['mobile-services-menu','mobile-about-menu','mobile-resources-menu'].forEach(id => {
-      const el = document.getElementById(id); if (el) el.classList.add('hidden');
-    });
-    ['mobile-services-icon','mobile-about-icon','mobile-resources-icon'].forEach(id => {
-      const el = document.getElementById(id); if (el) el.style.transform = '';
-    });
-  }
-
   function toggleMobileAccordion(menuId, iconId) {
     const menu   = document.getElementById(menuId);
     const icon   = document.getElementById(iconId);
@@ -521,10 +485,61 @@
     if (!isOpen) { menu.classList.remove('hidden'); icon.style.transform = 'rotate(180deg)'; }
   }
 
-  // Scroll fade-in
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.1 });
+  /* ---- Contact Form Handler ---- */
+  function wireForm(formId, statusId) {
+    const form   = document.getElementById(formId);
+    const status = document.getElementById(statusId);
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      const data = Object.fromEntries(new FormData(form));
+      const btn  = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          status.className = 'text-center text-xs text-green-600 font-semibold';
+          status.textContent = '✓ Message sent! We\'ll be in touch within 1 hour.';
+          form.reset();
+
+          if (typeof gtag === 'function') {
+            gtag('event', 'form_submit', {
+              event_category: 'lead',
+              event_label: 'contact_form',
+              form_name: formId
+            });
+          }
+        } else {
+          throw new Error('server');
+        }
+      } catch (err) {
+        status.className = 'text-center text-xs text-red-600';
+        status.textContent = 'Something went wrong. Please call us directly at 816.289.9600.';
+      } finally {
+        status.classList.remove('hidden');
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      }
+    });
+  }
+
+  wireForm('contact-form', 'contact-form-status');
+
+  /* ---- Scroll Fade-in Animations ---- */
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 

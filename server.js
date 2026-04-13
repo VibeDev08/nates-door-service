@@ -102,6 +102,22 @@ app.get('/about-nate', (req, res) => {
   res.sendFile(path.join(__dirname, 'about-nate', 'index.html'));
 });
 
+/* Sitemap & robots */
+app.get('/sitemap.xml', (req, res) => {
+  res.setHeader('Content-Type', 'application/xml');
+  res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+
+app.get('/robots.txt', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain');
+  res.sendFile(path.join(__dirname, 'robots.txt'));
+});
+
+/* Contact page */
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, 'contact', 'index.html'));
+});
+
 /* Service areas page */
 app.get('/garage-door-service-areas-kansas-city', (req, res) => {
   res.sendFile(path.join(__dirname, 'garage-door-service-areas-kansas-city', 'index.html'));
