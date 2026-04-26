@@ -34,8 +34,22 @@ function getResend() {
 /* Parse JSON bodies */
 app.use(express.json());
 
+/* Canonicalize contact URL to a single trailing-slash target on production host */
+app.use((req, res, next) => {
+  const host = (req.headers.host || '').toLowerCase();
+  const proto = (req.headers['x-forwarded-proto'] || req.protocol || 'http').toLowerCase();
+  const isProdHost = host === 'www.natesdoorservice.com' || host === 'natesdoorservice.com';
+  const wantsCanonicalContact = req.path === '/contact' || req.path === '/contact/index.html';
+
+  if (isProdHost && wantsCanonicalContact) {
+    return res.redirect(308, 'https://www.natesdoorservice.com/contact/');
+  }
+
+  next();
+});
+
 /* Serve the project folder as static files (index.html, images, etc.) */
-app.use(express.static(__dirname));
+app.use(express.static(__dirname, { redirect: false }));
 
 /* ------------------------------------------------------------------ */
 /* POST /api/contact — receive quote request and email it via Resend   */
@@ -114,7 +128,7 @@ app.get('/robots.txt', (req, res) => {
 });
 
 /* Contact page */
-app.get('/contact', (req, res) => {
+app.get(['/contact', '/contact/'], (req, res) => {
   res.sendFile(path.join(__dirname, 'contact', 'index.html'));
 });
 
